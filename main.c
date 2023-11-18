@@ -85,7 +85,7 @@ void calc()
     }
     else if (n==3)
     {
-        printf("Enter the number: ");
+        printf("Log(");
         double x;
         scanf("%lf", &x);
         printf("%lf", log(x));
