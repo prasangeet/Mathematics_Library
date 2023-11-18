@@ -16,7 +16,7 @@ double differentiation(double x)
 
 double integration(double x, double y)
 {
-    double h = 0.001f;
+    double h = 0.0000001f;
     double sum = 0;
     for (double i = 0; i < y-x; i+=h)
     {
