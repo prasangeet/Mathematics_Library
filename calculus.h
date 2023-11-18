@@ -45,7 +45,7 @@ double exp(double x)
     return pow(e, x);
 }
 
-double log10(double x)
+double log_x(double x, double y)
 {
-    return log(x)/log(10);
+    return log(y)/log(x);
 }

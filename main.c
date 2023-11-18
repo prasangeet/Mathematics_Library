@@ -62,7 +62,7 @@ void comp()
 
 void calc()
 {
-    printf("\nEnter the fuction to perform: Differentiation(1), Integration(2), Logarithm(3), Exponential(4), Power(6)\n");
+    printf("\nEnter the fuction to perform: Differentiation(1), Integration(2), Logarithm(3), Exponential(4), Log_x(6)\n");
     int n;
     scanf("%d", &n);
     if(n==1)
@@ -101,10 +101,10 @@ void calc()
     }
     else if(n == 6)
     {
-        printf("Enter the x and y respectively (x^y): ");
+        printf("log_(x) (y) : ");
         double x, y;
         scanf("%lf %lf", &x, &y);
-        printf("%lf", pow(x, y));
+        printf("%lf", log_x(x, y));
         reini();
     }
 }
