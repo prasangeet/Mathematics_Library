@@ -172,6 +172,9 @@ int main()
     case 2:
         calc();
         break;
+    case 3:
+        exit(0);
+        break;
     case 5:
         exit(0);
     default:
