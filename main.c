@@ -9,6 +9,11 @@
 
 int main();
 
+void trig()
+{
+    
+}
+
 void comp()
 {
     printf("\nChoose the operation to perform: Addition(1), Subtraction(2), Multiplication(3), Division(4), Modulus(5), Argument(6)\n");
