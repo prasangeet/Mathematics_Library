@@ -46,3 +46,18 @@ double tangen(double x){
     double tan= sin/cos;
     return tan;
 }
+double cosin(double x){
+    double nis = sine(x);
+    double cosine = 1/nis;
+    return cosine;
+}
+double secan(double x){
+    double ces = cosin(x);
+    double secant = 1/ces;
+    return secant;
+}
+double cotangen(double x){
+    double toc = tangen(x);
+    double cotangent = 1/toc;
+    return cotangent;
+}
