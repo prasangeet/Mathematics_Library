@@ -39,6 +39,52 @@ void trig()
             reini();
         }
     }
+    else if (n == 2)
+    {
+        printf("\nDegrees(1), Radians(2)\n");
+        int angle_selector;
+        scanf("%d", &angle_selector);
+        if (angle_selector == 1)
+        {
+            printf("cos(degrees): ");
+            double degrees;
+            scanf("%lf", &degrees);
+            double radians = degrees * (pi/180);
+            printf("%lf", cosin(radians));
+            reini();
+        }
+        else if (angle_selector == 2)
+        {
+            printf("cos(radians): ");
+            double radians;
+            scanf("%lf", &radians);
+            printf("%lf", cosin(radians));
+            reini();
+        }
+    }
+    else if (n==3)
+    {
+        printf("\nDegrees(1), Radians(2)\n");
+        int angle_selector;
+        scanf("%d", &angle_selector);
+        if (angle_selector == 1)
+        {
+            printf("tan(degrees): ");
+            double degrees;
+            scanf("%lf", &degrees);
+            double radians = degrees * (pi/180);
+            printf("%lf", tangen(radians));
+            reini();
+        }
+        else if (angle_selector == 2)
+        {
+            printf("tan(radians): ");
+            double radians;
+            scanf("%lf", &radians);
+            printf("%lf", tangen(radians));
+            reini();
+        }
+    }
 }
 
 void comp()
