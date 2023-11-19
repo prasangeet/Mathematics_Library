@@ -15,7 +15,7 @@ double factorialfunction(int n) {
     return factorial;
 }
 
-double sin(double x) {
+double sine(double x) {
     double result = 0.0;
     int sign = 1;
     int terms = 100;
