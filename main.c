@@ -7,11 +7,38 @@
 #include"trigonometry.h"
 #include"reinitialize.h"
 
+const double pi = 3.141592654;
+
 int main();
 
 void trig()
 {
-    
+    printf("\nsine(1), cosine(2), tangent(3)\n");
+    int n;
+    scanf("%d", &n);
+    if (n == 1)         
+    {
+        printf("\nDegrees(1), Radians(2)\n");
+        int angle_selector;
+        scanf("%d", &angle_selector);
+        if (angle_selector == 1)
+        {
+            printf("sin(degrees): ");
+            double degrees;
+            scanf("%lf", &degrees);
+            double radians = degrees * (pi/180);
+            printf("%lf", sine(radians));
+            reini();
+        }
+        else if (angle_selector == 2)
+        {
+            printf("sin(radians): ");
+            double radians;
+            scanf("%lf", &radians);
+            printf("%lf", sine(radians));
+            reini();
+        }
+    }
 }
 
 void comp()
@@ -179,7 +206,7 @@ int main()
         calc();
         break;
     case 3:
-        exit(0);
+        trig();
         break;
     case 5:
         exit(0);
