@@ -100,7 +100,7 @@ void calc()
     scanf("%d", &n);
     if(n==1)
     {
-        printf("Enter the value to put in the function: ");
+        printf("(Sample function is to be written in the code) Enter the value to put in the function: ");
         double x;
         scanf("%lf", &x);
         double a = differentiation(x);
@@ -109,7 +109,7 @@ void calc()
     }
     else if (n==2)
     {
-        printf("Enter the limits: ");
+        printf("(Sample function is to be written in the code) Enter the limits: ");
         double x, y;
         scanf("%lf %lf", &x, &y);
         double a = integration(x, y);

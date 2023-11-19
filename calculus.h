@@ -4,6 +4,7 @@
 
 double f(double x)
 {
+    //test function
     return pow(x, 2)+x;
 }
 
