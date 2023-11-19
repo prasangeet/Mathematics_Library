@@ -27,3 +27,33 @@ double sin(double x) {
     }
     return result;
 }
+//cosine
+
+double factorialfunction(int n) {
+    if (n == 0 || n == 1) {
+        return 1.0;
+    } else {
+        return n * factorialfunction(n - 1);
+    }
+}
+
+double powerfunction(double x, int n) {
+    int result = 1;
+    for (int i = 0; i < n; i++) {
+        result =result* x;
+    }
+    return result;
+}
+
+double cosin(double x) {
+    double cosine = 0.0;
+    int sign = 1;
+
+    for (int i = 0; i < 100; i++) {
+        double term = powerfunction(x, 2 * i) / factorialfunction(2 * i);
+        cosine = cosine +sign * term;
+        sign = -sign;
+    }
+
+    return cosine;
+}
