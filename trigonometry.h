@@ -40,3 +40,9 @@ double cosin(double x) {
 
     return cosine;
 }
+double tangen(double x){
+    double sin = sine(x);
+    double cos = cosin(x);
+    double tan= sin/cos;
+    return tan;
+}
