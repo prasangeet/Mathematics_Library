@@ -4,6 +4,7 @@
 #include"algebra.h"
 #include"calculus.h"
 #include"complex.h"
+#include"trigonometry.h"
 #include"reinitialize.h"
 
 int main();
