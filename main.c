@@ -6,11 +6,13 @@
 #include"complex.h"
 #include"trigonometry.h"
 #include"reinitialize.h"
+#include"quadratic.h"
+#include"linear.h"
+#include"stats.h"
 #define MAX 1000000.00f
 #define MIN -1000000.00f
 
 const double pi = 3.141592654;
-
 
 int main();
 
@@ -309,6 +311,46 @@ void calc()
     
 }
 
+void stat()
+{
+    printf("\nMean(1), Median(2), Mode(3)\n");
+    int n;
+    scanf("%d", &n);
+    if (n == 1)
+    {
+        int no_of_elem;
+        float elem_array[no_of_elem];
+        printf("enter the no of elements: ");
+        scanf("%d", &no_of_elem);
+        printf("enter the elements of the array: ");
+        for(int i=0;i<no_of_elem;i++)
+        {
+            scanf("%f", &elem_array[i]);
+        }
+        printf("%f", Mean(no_of_elem, elem_array));
+        reini();
+    }
+    else if (n == 2)
+    {
+        int no_of_elem;
+        float elem_array[no_of_elem];
+        printf("enter the no of elements: ");
+        scanf("%d", &no_of_elem);
+        printf("enter the elements of the array: ");
+        for( int i=0;i<no_of_elem;i++)
+        {
+            scanf("%f", &elem_array[i]);
+        }
+        printf("%f", Median(no_of_elem, elem_array));
+        reini();
+    }
+    else if (n == 3)
+    {
+        Mode();
+        reini();
+    }
+}
+
 void alge()
 {   
     printf("\nEnter the function you need to do: Permutation(1), Combination(2), Equations((31)Linear, (32)Quadratic), Basic calutions(4), Complex(5)\n");
@@ -351,6 +393,33 @@ void alge()
             printf("%lld", combination(n, r));
             reini();
         }
+    else if (n == 31)
+    {
+        printf("\n\nLinear mode has been activated\nEquation in the form ax + b = c \n");
+        double a, b, c;
+        printf("a = ");
+        scanf("%lf", &a);
+        printf("b = ");
+        scanf("%lf", &b);
+        printf("c = ");
+        scanf("%lf", &c);
+        printf("x = %lf", lineareq(a, b, c));
+        reini();
+    }
+    else if (n == 32)
+    {
+        printf("\n\nQuadratic mode has been activated\nEquation in the form ax^2 + bx + c = 0 \n");
+        double a, b, c;
+        printf("a = ");
+        scanf("%lf", &a);
+        printf("b = ");
+        scanf("%lf", &b);
+        printf("c = ");
+        scanf("%lf", &c);
+        quad(a, b, c);
+        reini();
+    }
+    
     else if (n == 5)
     {
         printf("Complex mode has been turned on");
@@ -376,10 +445,11 @@ int main()
         trig();
         break;
     case 4:
-        exit(0);
+        stat();
         break;
     case 5:
         exit(0);
+        break;
     default:
         printf("Invalid Input: Reinitializing the calculator...\n");
         main();
