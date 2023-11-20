@@ -9,6 +9,7 @@
 #include"quadratic.h"
 #include"linear.h"
 #include"stats.h"
+#include"matrix.h"
 #define MAX 1000000.00f
 #define MIN -1000000.00f
 
@@ -311,6 +312,79 @@ void calc()
     
 }
 
+void matrx()
+{
+    printf("\n\nAddition(1), Subtraction(2), Multiplication(3)\n");
+    int n;
+    scanf("%d", &n);
+    if (n == 1)
+    {
+        printf("Row x Colomn: ");
+        int m,n;
+        scanf("%d %d", &m, &n);
+        int a[m][n], b[m][n], c[m][n];
+        printf("matrix a: \n");
+        matrixscan(m, n, a);
+        printf("matrix b: \n");
+        matrixscan(m, n, b);
+        matadd(m, n, a, b, c);
+        printf("Ans: \n");
+        for(int i = 0; i<m; i++)
+        {
+            for(int j = 0; j < n; j++)
+            {
+                printf("%d ", c[i][j]);
+            }
+            printf("\n");
+        }
+        return 0;
+    }
+    else if (n == 2)
+    {
+        printf("Row x Colomn: ");
+        int m,n;
+        scanf("%d %d", &m, &n);
+        int a[m][n], b[m][n], c[m][n];
+        printf("matrix a: \n");
+        matrixscan(m, n, a);
+        printf("matrix b: \n");
+        matrixscan(m, n, b);
+        matsub(m, n, a, b, c);
+        printf("Ans: \n");
+        for(int i = 0; i<m; i++)
+        {
+            for(int j = 0; j < n; j++)
+            {
+                printf("%d ", c[i][j]);
+            }
+            printf("\n");
+        }
+        return 0;
+    }
+    else if (n == 3)
+    {
+        printf("Row x Colomn: ");
+        int m,n;
+        scanf("%d %d", &m, &n);
+        int a[m][n], b[m][n], c[m][n];
+        printf("matrix a: \n");
+        matrixscan(m, n, a);
+        printf("matrix b: \n");
+        matrixscan(m, n, b);
+        matmul(m, n, a, b, c);
+        printf("Ans: \n");
+        for(int i = 0; i<m; i++)
+        {
+            for(int j = 0; j < n; j++)
+            {
+                printf("%d ", c[i][j]);
+            }
+            printf("\n");
+        }
+        return 0;
+    } 
+}
+
 void stat()
 {
     printf("\nMean(1), Median(2), Mode(3)\n");
@@ -353,7 +427,7 @@ void stat()
 
 void alge()
 {   
-    printf("\nEnter the function you need to do: Permutation(1), Combination(2), Equations((31)Linear, (32)Quadratic), Basic calutions(4), Complex(5)\n");
+    printf("\nEnter the function you need to do: Permutation(1), Combination(2), Equations((31)Linear, (32)Quadratic), Basic calutions(4), Complex(5), Matrix(6)\n");
     int n;
     scanf("%d", &n);
     if(n == 1)
@@ -419,12 +493,17 @@ void alge()
         quad(a, b, c);
         reini();
     }
-    
     else if (n == 5)
     {
         printf("Complex mode has been turned on");
         comp();
     }
+    else if (n == 6)
+    {
+        printf("Matrix mode has been turned on");
+        matrx();
+    }
+    
 }
 
 int main()
