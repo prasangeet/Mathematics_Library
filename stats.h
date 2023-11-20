@@ -35,7 +35,7 @@ float Mode(){
     scanf("%d",&n);
     float a[n];
     for(int i=0;i<n;i++){
-        scanf("%d",&a[i]);
+        scanf("%f",&a[i]);
     }
     int freq[n];
     for (int i = 0; i < n; i++) {
