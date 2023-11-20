@@ -253,7 +253,7 @@ void comp()
 
 void calc()
 {
-    printf("\nEnter the fuction to perform: Differentiation(1), Integration(2), Logarithm(3), Exponential(4), Log_x(6)\n");
+    printf("\nEnter the fuction to perform: Differentiation(1), Integration(2), Logarithm(3), Exponential(4), Log_x(6), antilog(7)\n");
     int n;
     scanf("%d", &n);
     if(n==1)
@@ -298,6 +298,15 @@ void calc()
         printf("%lf", log_x(x, y));
         reini();
     }
+    else if (n == 7)
+    {
+        printf("antilog(x) ");
+        double x;
+        scanf("%lf", &x);
+        printf("%lf", antiloga(x));
+        reini();
+    }
+    
 }
 
 void alge()

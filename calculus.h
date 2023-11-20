@@ -50,3 +50,8 @@ double log_x(double x, double y)
 {
     return loga(y)/loga(x);
 }
+
+double antiloga(double x)
+{
+    return pow(10, x);
+}
