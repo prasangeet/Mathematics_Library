@@ -85,6 +85,78 @@ void trig()
             reini();
         }
     }
+    else if (n == 4)
+    {
+        printf("\nDegrees(1), Radians(2)\n");
+        int angle_selector;
+        scanf("%d", &angle_selector);
+        if (angle_selector == 1)
+        {
+            printf("cosec(degrees): ");
+            double degrees;
+            scanf("%lf", &degrees);
+            double radians = degrees * (pi/180);
+            printf("%lf", cosecan(radians));
+            reini();
+        }
+        else if (angle_selector == 2)
+        {
+            printf("cosec(radians): ");
+            double radians;
+            scanf("%lf", &radians);
+            printf("%lf", cosecan(radians));
+            reini();
+        }
+    }
+    else if (n == 5)
+    {
+        printf("\nDegrees(1), Radians(2)\n");
+        int angle_selector;
+        scanf("%d", &angle_selector);
+        if (angle_selector == 1)
+        {
+            printf("sec(degrees): ");
+            double degrees;
+            scanf("%lf", &degrees);
+            double radians = degrees * (pi/180);
+            printf("%lf", secan(radians));
+            reini();
+        }
+        else if (angle_selector == 2)
+        {
+            printf("sec(radians): ");
+            double radians;
+            scanf("%lf", &radians);
+            printf("%lf", secan(radians));
+            reini();
+        }
+    }
+    else if (n == 6)
+    {
+        printf("\nDegrees(1), Radians(2)\n");
+        int angle_selector;
+        scanf("%d", &angle_selector);
+        if (angle_selector == 1)
+        {
+            printf("cot(degrees): ");
+            double degrees;
+            scanf("%lf", &degrees);
+            double radians = degrees * (pi/180);
+            printf("%lf", cotangen(radians));
+            reini();
+        }
+        else if (angle_selector == 2)
+        {
+            printf("cot(radians): ");
+            double radians;
+            scanf("%lf", &radians);
+            printf("%lf", cotangen(radians));
+            reini();
+        }
+    }
+    
+    
+    
 }
 
 void comp()

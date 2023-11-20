@@ -46,10 +46,10 @@ double tangen(double x){
     double tan= sin/cos;
     return tan;
 }
-double cosin(double x){
+double cosecan(double x){
     double nis = sine(x);
-    double cosine = 1/nis;
-    return cosine;
+    double cosecant = 1/nis;
+    return cosecant;
 }
 double secan(double x){
     double ces = cosin(x);
