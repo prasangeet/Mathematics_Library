@@ -6,8 +6,11 @@
 #include"complex.h"
 #include"trigonometry.h"
 #include"reinitialize.h"
+#define MAX 1000000.00f
+#define MIN -1000000.00f
 
 const double pi = 3.141592654;
+
 
 int main();
 
@@ -73,6 +76,11 @@ void trig()
             double degrees;
             scanf("%lf", &degrees);
             double radians = degrees * (pi/180);
+            if (tangen(radians) > MAX || tangen(radians) < MIN)        
+            {
+                printf("Inf");
+                reini();
+            }
             printf("%lf", tangen(radians));
             reini();
         }
@@ -82,6 +90,11 @@ void trig()
             double radians;
             scanf("%lf", &radians);
             printf("%lf", tangen(radians));
+            if (tangen(radians) > MAX || tangen(radians) < MIN)        
+            {
+                printf("Inf");
+                reini();
+            }
             reini();
         }
     }
@@ -96,6 +109,11 @@ void trig()
             double degrees;
             scanf("%lf", &degrees);
             double radians = degrees * (pi/180);
+            if (cosecan(radians) > MAX || cosecan(radians) < MIN)        
+            {
+                printf("Inf");
+                reini();
+            }
             printf("%lf", cosecan(radians));
             reini();
         }
@@ -104,6 +122,11 @@ void trig()
             printf("cosec(radians): ");
             double radians;
             scanf("%lf", &radians);
+            if (cosecan(radians) > MAX || cosecan(radians) < MIN)        
+            {
+                printf("Inf");
+                reini();
+            }
             printf("%lf", cosecan(radians));
             reini();
         }
@@ -119,6 +142,11 @@ void trig()
             double degrees;
             scanf("%lf", &degrees);
             double radians = degrees * (pi/180);
+            if (secan(radians) > MAX || secan(radians) < MIN)        
+            {
+                printf("Inf");
+                reini();
+            }
             printf("%lf", secan(radians));
             reini();
         }
@@ -127,6 +155,11 @@ void trig()
             printf("sec(radians): ");
             double radians;
             scanf("%lf", &radians);
+            if (secan(radians) > MAX || secan(radians) < MIN)        
+            {
+                printf("Inf");
+                reini();
+            }
             printf("%lf", secan(radians));
             reini();
         }
@@ -142,6 +175,11 @@ void trig()
             double degrees;
             scanf("%lf", &degrees);
             double radians = degrees * (pi/180);
+            if (cotangen(radians) > MAX || cotangen(radians) < MIN)        
+            {
+                printf("Inf");
+                reini();
+            }
             printf("%lf", cotangen(radians));
             reini();
         }
@@ -150,13 +188,15 @@ void trig()
             printf("cot(radians): ");
             double radians;
             scanf("%lf", &radians);
+            if (cotangen(radians) > MAX || cotangen(radians) < MIN)
+            {
+                printf("Inf");
+                reini();
+            }
             printf("%lf", cotangen(radians));
             reini();
         }
     }
-    
-    
-    
 }
 
 void comp()
@@ -239,7 +279,7 @@ void calc()
         printf("Log(");
         double x;
         scanf("%lf", &x);
-        printf("%lf", log(x));
+        printf("%lf", loga(x));
         reini();
     }
     else if (n==4)

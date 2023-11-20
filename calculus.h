@@ -26,7 +26,7 @@ double integration(double x, double y)
     return sum;
 }
 
-double log(double x) {
+double loga(double x) {
     double result = 0.0;
     double term = (x - 1) / (x + 1);
     double term_squared = term * term;
@@ -48,5 +48,5 @@ double exp(double x)
 
 double log_x(double x, double y)
 {
-    return log(y)/log(x);
+    return loga(y)/loga(x);
 }
