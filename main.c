@@ -254,6 +254,9 @@ int main()
     case 3:
         trig();
         break;
+    case 4:
+        exit(0);
+        break;
     case 5:
         exit(0);
     default:
