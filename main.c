@@ -13,7 +13,7 @@ int main();
 
 void trig()
 {
-    printf("\nsine(1), cosine(2), tangent(3)\n");
+    printf("\nsine(1), cosine(2), tangent(3), cosecant(4), secant(5), cotangent(6)\n");
     int n;
     scanf("%d", &n);
     if (n == 1)         
