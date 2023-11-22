@@ -314,7 +314,7 @@ void calc()
 
 void matrx()
 {
-    printf("\n\nAddition(1), Subtraction(2), Multiplication(3)\n");
+    printf("\n\nAddition(1), Subtraction(2), Multiplication(3), Transpose(4)\n");
     int n;
     scanf("%d", &n);
     if (n == 1)
@@ -337,7 +337,7 @@ void matrx()
             }
             printf("\n");
         }
-        return 0;
+        reini();
     }
     else if (n == 2)
     {
@@ -359,7 +359,7 @@ void matrx()
             }
             printf("\n");
         }
-        return 0;
+        reini();
     }
     else if (n == 3)
     {
@@ -381,8 +381,29 @@ void matrx()
             }
             printf("\n");
         }
-        return 0;
-    } 
+        reini();
+    }
+    else if (n == 4)
+    {
+        printf("Row x Colomn: ");
+        int m, n;
+        scanf("%d %d", &m, &n);
+        int a[m][n], c[m][n];
+        printf("input matrix: ");
+        matrixscan(m, n, a);
+        mat_transpose(m, n, a, c);
+        printf("Ans: \n");
+        for(int i = 0; i<m; i++)
+        {
+            for(int j = 0; j < n; j++)
+            {
+                printf("%d ", c[i][j]);
+            }
+            printf("\n");
+        }
+        reini();
+    }
+    
 }
 
 void stat()

@@ -50,3 +50,14 @@ int matmul(int m, int n, int a[m][n], int b[m][n], int c[m][n])
         }    
     }    
 }
+
+int mat_transpose(int m, int n, int a[m][n], int c[m][n])
+{
+    for (int i = 0; i < m; i++) 
+    {
+        for (int j = 0; j < n; j++)
+        {
+            c[i][j] = a[j][i];
+        }
+    }
+}
