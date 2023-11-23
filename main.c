@@ -389,7 +389,7 @@ void matrx()
         int m, n;
         scanf("%d %d", &m, &n);
         int a[m][n], c[m][n];
-        printf("input matrix: ");
+        printf("input matrix:\n");
         matrixscan(m, n, a);
         mat_transpose(m, n, a, c);
         printf("Ans: \n");
@@ -403,7 +403,6 @@ void matrx()
         }
         reini();
     }
-    
 }
 
 void stat()
