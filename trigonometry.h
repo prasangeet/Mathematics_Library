@@ -1,5 +1,5 @@
 #include <stdio.h>
-double powerfunction(double x, int n) {
+double power(double x, int n) {
     double power = 1.0;
     for (int i = 0; i < n; ++i) {
         power = power* x;
@@ -21,7 +21,7 @@ double sine(double x) {
     int terms = 100;
 
     for (int i = 0; i < terms; ++i) {
-    double term = powerfunction(x, 2 * i + 1) / factorialfunction(2 * i + 1);
+    double term = power(x, 2 * i + 1) / factorialfunction(2 * i + 1);
         result += sign * term;
         sign = -sign;
     }
@@ -33,7 +33,7 @@ double cosin(double x) {
     int sign = 1;
 
     for (int i = 0; i < 100; i++) {
-        double term = powerfunction(x, 2 * i) / factorialfunction(2 * i);
+        double term = power(x, 2 * i) / factorialfunction(2 * i);
         cosine = cosine +sign * term;
         sign = -sign;
     }
