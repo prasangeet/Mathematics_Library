@@ -71,3 +71,14 @@ int mat_transpose(int m, int n, int a[m][n], int c[n][m])
     }
     return 0;
 }
+
+int determinant(int n, int mat[n][n]) 
+{
+    int deter = 0;
+    for (int i = 0; i < n; i++) 
+    {
+        deter += (mat[0][i] * (mat[1][(i + 1) % n] * mat[2][(i + 2) % n] - mat[1][(i + 2) % n] * mat[2][(i + 1) % n]));
+    }
+
+    return deter;
+}

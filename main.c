@@ -315,7 +315,7 @@ void calc()
 
 void matrx()
 {
-    printf("\n\nAddition(1), Subtraction(2), Multiplication(3), Transpose(4)\n");
+    printf("\n\nAddition(1), Subtraction(2), Multiplication(3), Transpose(4), Determinant(5)\n");
     int n;
     scanf("%d", &n);
     if (n == 1)
@@ -393,6 +393,14 @@ void matrx()
         printf("Input matrix:\n");
         matrixscan(m, n, a);
         mat_transpose(m, n, a, c);
+        reini();
+    }
+    else if (n == 5)
+    {
+        printf("\n(3x3)\n");
+        int a[3][3];
+        matrixscan(3, 3, a);
+        printf("%d", determinant(3, a));
         reini();
     }
 }
