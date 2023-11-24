@@ -397,8 +397,8 @@ void matrx()
     }
     else if (n == 5)
     {
-        printf("\n(3x3)\n");
-        int a[3][3];
+        float a[3][3];
+        printf("Enter the elements of the 3x3 matrix:\n");
         matrixscan(3, 3, a);
         printf("%d", determinant(3, a));
         reini();
@@ -530,7 +530,7 @@ void alge()
 
 int main()
 {
-    printf("Initializing the Calulator...\nCalculator is ready to use.\nPlease enter the type of function you need to do: \nAlgebra(1), Calculus(2), Trigonometry(3), Statistics(4), Exit(5)\n");
+    printf("Initializing the Calulator...\nCalculator is ready to use.\nPlease enter the type of function you need to do: \nAlgebra(1), Calculus(2), Trigonometry(3), Statistics(4),matrix(5), Exit(6)\n");
     int n;
     scanf("%d", &n);
     switch (n)
@@ -549,6 +549,9 @@ int main()
         stat();
         break;
     case 5:
+        matrx();
+        break;    
+    case 6:
         exit(0);
         break;
     default:
