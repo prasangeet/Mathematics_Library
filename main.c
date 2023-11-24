@@ -530,7 +530,7 @@ void alge()
 
 int main()
 {
-    printf("Initializing the Calulator...\nCalculator is ready to use.\nPlease enter the type of function you need to do: \nAlgebra(1), Calculus(2), Trigonometry(3), Statistics(4),matrix(5), Exit(6)\n");
+    printf("Initializing the Calulator...\nCalculator is ready to use.\nPlease enter the type of function you need to do: \nAlgebra(1), Calculus(2), Trigonometry(3), Statistics(4), Exit(5)\n");
     int n;
     scanf("%d", &n);
     switch (n)
@@ -547,11 +547,8 @@ int main()
         break;
     case 4:
         stat();
-        break;
-    case 5:
-        matrx();
         break;    
-    case 6:
+    case 5:
         exit(0);
         break;
     default:
