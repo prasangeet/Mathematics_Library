@@ -12,7 +12,8 @@
 #include"matrix.h"
 #define MAX 1000000.00f
 #define MIN -1000000.00f
-
+#define MAXROWS 10
+#define MAXCOLS 10
 const double pi = 3.141592654;
 
 int main();
@@ -385,22 +386,13 @@ void matrx()
     }
     else if (n == 4)
     {
-        printf("Row x Colomn: ");
+        printf("Row x Column: ");
         int m, n;
         scanf("%d %d", &m, &n);
-        int a[m][n], c[m][n];
-        printf("input matrix:\n");
+        int a[MAX_ROWS][MAX_COLS], c[MAX_COLS][MAX_ROWS];
+        printf("Input matrix:\n");
         matrixscan(m, n, a);
         mat_transpose(m, n, a, c);
-        printf("Ans: \n");
-        for(int i = 0; i<m; i++)
-        {
-            for(int j = 0; j < n; j++)
-            {
-                printf("%d ", c[i][j]);
-            }
-            printf("\n");
-        }
         reini();
     }
 }
@@ -413,13 +405,13 @@ void stat()
     if (n == 1)
     {
         int no_of_elem;
-        float elem_array[no_of_elem];
         printf("enter the no of elements: ");
         scanf("%d", &no_of_elem);
+        double elem_array[no_of_elem];
         printf("enter the elements of the array: ");
         for(int i=0;i<no_of_elem;i++)
         {
-            scanf("%f", &elem_array[i]);
+            scanf("%lf", &elem_array[i]);
         }
         printf("%f", Mean(no_of_elem, elem_array));
         reini();
@@ -427,20 +419,22 @@ void stat()
     else if (n == 2)
     {
         int no_of_elem;
-        float elem_array[no_of_elem];
         printf("enter the no of elements: ");
         scanf("%d", &no_of_elem);
+        double elem_array[no_of_elem];
         printf("enter the elements of the array: ");
-        for( int i=0;i<no_of_elem;i++)
+        for(int i=0; i<no_of_elem; i++)
         {
-            scanf("%f", &elem_array[i]);
+            scanf("%lf", &elem_array[i]);
         }
         printf("%f", Median(no_of_elem, elem_array));
         reini();
     }
     else if (n == 3)
     {
-        Mode();
+        int no_of_elem;
+        printf("enter the number of elements: ");
+        scanf("%d", &no_of_elem);
         reini();
     }
 }

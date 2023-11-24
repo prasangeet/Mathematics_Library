@@ -1,19 +1,19 @@
 #include<stdio.h>
 #include<math.h>
 
-float Mean(int n, float a[]){
-    float sum = 0;
+double Mean(int n, double a[]){
+    double sum = 0;
     for( int i=0;i<n;i++){
        sum+=a[i];
     }
-    float m=sum/n;
+    double m=sum/n;
     return m;
 }
 
-float Median(int n, float a[]){
-    int m;
+double Median(int n, double a[]){
+    double m;
     for(int i=0;i<n;i++){
-        for(int j=0;j<n;j++){
+        for(int j=i+1;j<n;j++){
             if(a[i]>a[j]){
                 int temp=a[i];
                 a[i]=a[j];
@@ -30,12 +30,12 @@ float Median(int n, float a[]){
     return m;
 }
 
-float Mode(){
+double Mode(){
     int n;
     scanf("%d",&n);
-    float a[n];
+    double a[n];
     for(int i=0;i<n;i++){
-        scanf("%f",&a[i]);
+        scanf("%lf",&a[i]);
     }
     int freq[n];
     for (int i = 0; i < n; i++) {

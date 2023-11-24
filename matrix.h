@@ -1,5 +1,6 @@
 #include<stdio.h>
-
+#define MAX_ROWS 10
+#define MAX_COLS 10
 int matrixscan(int m, int n, int a[m][n])
 {
     for(int i = 0; i < m; i++)
@@ -48,16 +49,25 @@ int matmul(int m, int n, int a[m][n], int b[m][n], int c[m][n])
                 c[i][j] += a[i][k] * b[k][j];    
             }    
         }    
-    }    
+    }
+    return 0;
 }
 
-int mat_transpose(int m, int n, int a[m][n], int c[m][n])
+int mat_transpose(int m, int n, int a[m][n], int c[n][m])
 {
     for (int i = 0; i < m; i++) 
     {
         for (int j = 0; j < n; j++)
         {
-            c[i][j] = a[j][i];
+            c[j][i] = a[i][j];
         }
     }
+    printf("Ans:\n");
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            printf("%d ", c[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
 }
