@@ -443,6 +443,13 @@ void stat()
         int no_of_elem;
         printf("enter the number of elements: ");
         scanf("%d", &no_of_elem);
+        printf("enter the elements of the array: ");
+        double elem_array[no_of_elem];
+        for (int i = 0; i < no_of_elem; i++)
+        {
+            scanf("%lf", &elem_array[i]);
+        }
+        printf("%lf", Mode(no_of_elem, elem_array));
         reini();
     }
 }
