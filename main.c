@@ -10,8 +10,6 @@
 #include"linear.h"
 #include"stats.h"
 #include"matrix.h"
-
-
 #define MAX 1000000.00f
 #define MIN -1000000.00f
 #define MAXROWS 10
