@@ -1,4 +1,4 @@
-# Mathematics_Library
+# Mathematics Library
 
 The code's basic functionality is to test various mathematical functions. involving Algebra, Calculus, Trignometry and statistics.
 
