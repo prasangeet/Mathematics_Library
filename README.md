@@ -1,6 +1,6 @@
 # Mathematics_Library
 
-The code basic functionality is to test various mathematical functions. involving Algebra, Calculus, Trignometry and statistics.
+The code's basic functionality is to test various mathematical functions. involving Algebra, Calculus, Trignometry and statistics.
 
 ### Algebra
 
@@ -23,4 +23,4 @@ Contains functions to compute Mean, Median, Mode.
 - Prasangeet Dongre B23CH1033
 - Goutham A.S. B23EE1024
 - Aditya Arya B23PH1001
-- Jyotiraditya B23BB1022
+- Jyotiraditya Singh Rathore B23BB1022
