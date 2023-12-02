@@ -498,7 +498,7 @@ void stat()
 
 void alge()
 {   
-    printf("\nEnter the function you need to do: Permutation(1), Combination(2), Equations((31)Linear, (32)Quadratic), Basic calutions(4), Complex(5), Matrix(6)\n");
+    printf("\nEnter the function you need to do: Permutation(1), Combination(2), Equations((31)Linear, (32)Quadratic), Complex(4), Matrix(5)\n");
     int n;
     scanf("%d", &n);
     if(n == 1)
@@ -564,12 +564,12 @@ void alge()
         quad(a, b, c);
         reini();
     }
-    else if (n == 5)
+    else if (n == 4)
     {
         printf("Complex mode has been turned on");
         comp();
     }
-    else if (n == 6)
+    else if (n == 5)
     {
         printf("Matrix mode has been turned on");
         matrx();
