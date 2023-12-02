@@ -2,25 +2,25 @@
 
 The code basic functionality is to test various mathematical functions. involving Algebra, Calculus, Trignometry and statistics.
 
-###Algebra
+### Algebra
 
 Contains Permutations, Combinations, Linear equations, Quadratic equations, Complex and Matrix Computations.
 
-###Calculus
+### Calculus
 
 Contains Integration, Differentiation, Exponential and logarithms Computations.
 
-###Trignometry
+### Trignometry
 
 Contains Trignometry and Inverse Trigonometric Functions.
 
-###Statistics
+### Statistics
 
 Contains functions to compute Mean, Median, Mode.
 
-##Colaborators
+## Colaborators
 
-Prasangeet Dongre B23CH1033
-Goutham A.S. B23EE1024
-Aditya Arya B23PH1001
-Jyotiraditya B23BB1022
+- Prasangeet Dongre B23CH1033
+- Goutham A.S. B23EE1024
+- Aditya Arya B23PH1001
+- Jyotiraditya B23BB1022
