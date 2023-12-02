@@ -10,6 +10,7 @@
 #include"linear.h"
 #include"stats.h"
 #include"matrix.h"
+#include"inversetrigo.h"
 #define MAX 1000000.00f
 #define MIN -1000000.00f
 #define MAXROWS 10
@@ -17,6 +18,47 @@
 const double pi = 3.141592654;
 
 int main();
+
+void arctrig()
+{
+    printf("\narcsine(1), arccosine(2), arctan(3)\n");
+    int n;
+    scanf("%d", &n);
+    if(n == 1)
+    {
+        printf("arcsin([-1,1]) : ");
+        double x;
+        scanf("%lf", &x);
+        if(arcsine(x) == 100)
+        {
+            printf("Input out of range.");
+            reini();
+        }
+        printf("%lf", arcsine(x));
+        reini();
+    }
+    else if (n==2)
+    {
+        printf("arccos([-1,1]) : ");
+        double x;
+        scanf("%lf", &x);
+        if(arccosine(x) == 100)
+        {
+            printf("Input out of range.");
+            reini();
+        }
+        printf("%lf", arccosine(x));
+        reini();
+    }
+    else if(n==3)
+    {
+        printf("arctan(R) : ");
+        double x;
+        scanf("%lf", &x);
+        printf("%lf", arctan(x));
+        reini();
+    }
+}
 
 void trig()
 {
@@ -537,7 +579,7 @@ void alge()
 
 int main()
 {
-    printf("Initializing the Calulator...\nCalculator is ready to use.\nPlease enter the type of function you need to do: \nAlgebra(1), Calculus(2), Trigonometry(3), Statistics(4), Exit(5)\n");
+    printf("Initializing the Calulator...\nCalculator is ready to use.\nPlease enter the type of function you need to do: \nAlgebra(1), Calculus(2), Trigonometry(3), Statistics(4), Inverse Trigonometry(5), Exit(6)\n");
     int n;
     scanf("%d", &n);
     switch (n)
@@ -554,8 +596,11 @@ int main()
         break;
     case 4:
         stat();
-        break;    
+        break;
     case 5:
+        arctrig();
+        break;
+    case 6:
         exit(0);
         break;
     default:
