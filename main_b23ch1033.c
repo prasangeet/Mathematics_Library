@@ -1,16 +1,16 @@
 #include<stdio.h>
 #include<conio.h>
 #include<stdlib.h>
-#include"algebra.h"
-#include"calculus.h"
-#include"complex.h"
-#include"trigonometry.h"
+#include"algebra_b23ee1024.h"
+#include"calculus_b23ch1033.h"
+#include"complex_b23ch1033.h"
+#include"trigonometry_b23ph1001.h"
 #include"reinitialize.h"
-#include"quadratic.h"
-#include"linear.h"
-#include"stats.h"
-#include"matrix.h"
-#include"inversetrigo.h"
+#include"quadratic_b23ee1024.h"
+#include"linear_b23ee1024.h"
+#include"stats_b23ee1024.h"
+#include"matrix_b23ch1033.h"
+#include"inversetrigo_b23bb1022.h"
 #define MAX 1000000.00f
 #define MIN -1000000.00f
 #define MAXROWS 10
