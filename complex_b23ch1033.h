@@ -11,7 +11,7 @@ double divi(double a1, double b1, double a2, double b2)
 {
     double a = (a1*a2 + b1*b2);
     double b = (-a1*b2 + b2*a1);
-    double c = pow(a2, 2) - pow(b2, 2);
+    double c = pow(a2, 2) + pow(b2, 2);
     double r = a/c, i = b/c;
     printf("(%lf) + (%lf)i", r, i);
     return 0;
