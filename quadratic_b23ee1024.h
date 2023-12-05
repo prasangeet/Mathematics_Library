@@ -8,7 +8,7 @@ double quad(double a, double b, double c){
         if (b == 0) {
             printf("no solution\n");
         } else {
-             x =(c-b) / a;
+             x =-c/b;
              printf("%f",x);
         }
     } else {
